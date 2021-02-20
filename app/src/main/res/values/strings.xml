@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Boiler Plate Code</string>
+    <string name="dialog_lorem">This is test dialog from the app</string>
+    <string name="permission_required_toast">Permission Denied</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="ask_permission">Please Provide Permission</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="permission_confirmation">Ask Permission</string>
+    <string name="loading">LOADING...</string>
+    <string name="change_language">CHANGE LANGUAGE</string>
+    <string name="pick_image_from_camera">PICK IMAGE FROM CAMERA</string>
+    <string name="open_other_activity">OPEN OTHER ACTIVITY</string>
+</resources>

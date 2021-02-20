@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".commonactivity.otpactivity.OTPActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp">
+
+        <EditText
+            android:id="@+id/otp_mEt1"
+            android:layout_width="@dimen/et_otp_width"
+            android:layout_height="@dimen/et_otp_height"
+            android:layout_marginEnd="@dimen/margin_right_otp"
+            android:background="@drawable/otp_inactivty_bg"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/otp_mEt2"
+            android:layout_width="@dimen/et_otp_width"
+            android:layout_height="@dimen/et_otp_height"
+            android:layout_marginEnd="@dimen/margin_right_otp"
+            android:background="@drawable/otp_inactivty_bg"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/otp_mEt3"
+            android:layout_width="@dimen/et_otp_width"
+            android:layout_height="@dimen/et_otp_height"
+            android:layout_marginEnd="@dimen/margin_right_otp"
+            android:background="@drawable/otp_inactivty_bg"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/otp_mEt4"
+            android:layout_width="@dimen/et_otp_width"
+            android:layout_height="@dimen/et_otp_height"
+            android:background="@drawable/otp_inactivty_bg"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

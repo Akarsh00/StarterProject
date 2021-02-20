@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">HINDI..AndroidBPCode</string>
+    <string name="dialog_lorem">HINDI..This is test dialog from the app</string>
+    <string name="permission_required_toast">HINDI..Permission Denied</string>
+    <string name="permission_denied">HINDI..Permission Denied</string>
+    <string name="ask_permission">HINDI..Please Provide Permission</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">HINDI..Hello blank fragment</string>
+    <string name="permission_confirmation">HINDI..Ask Permission</string>
+    <string name="loading">HINDI..LOADING...</string>
+    <string name="change_language">HINDI...CHANGE LANGUAGE</string>
+    <string name="pick_image_from_camera">HINDI...PICK IMAGE FROM CAMERA</string>
+    <string name="open_other_activity">HINDI...OPEN OTHER ACTIVITY</string>
+</resources>

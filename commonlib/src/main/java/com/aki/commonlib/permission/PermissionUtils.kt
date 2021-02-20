@@ -1,0 +1,55 @@
+package com.aki.commonlib.permission
+
+import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
+import android.os.Build
+import androidx.core.content.ContextCompat
+import com.aki.commonlib.permission.enums.PermissionEnum
+
+
+object PermissionUtils {
+
+    /**
+     * @param context current context
+     * @param permission permission to check
+     * @return if permission is granted return true
+     */
+    fun isGranted(context: Context, permission: PermissionEnum): Boolean {
+        return Build.VERSION.SDK_INT < Build.VERSION_CODES.M || ContextCompat.checkSelfPermission(context, permission.toString()) == PackageManager.PERMISSION_GRANTED
+    }
+
+    /**
+     * @param context    current context
+     * @param permission all permission you need to check
+     * @return if one of permission is not granted return false
+     */
+    fun isGranted(context: Context, vararg permission: PermissionEnum): Boolean {
+        for (permissionEnum in permission) {
+            if (!isGranted(context, permissionEnum)) {
+                return false
+            }
+        }
+        return true
+    }
+
+    /**
+     * @param packageName package name of your app
+     * @return an intent to start for open settings app
+     */
+    fun openApplicationSettings(packageName: String): Intent {
+        val intent = Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+        intent.data = Uri.parse("package:$packageName")
+        return intent
+    }
+
+    /**
+     * @param context     current context
+     * @param packageName package name of your app
+     */
+    fun openApplicationSettings(context: Context, packageName: String) {
+        context.startActivity(openApplicationSettings(packageName))
+    }
+
+}
