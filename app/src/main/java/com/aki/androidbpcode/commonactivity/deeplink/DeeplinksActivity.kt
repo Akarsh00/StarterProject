@@ -9,6 +9,10 @@ import com.aki.androidbpcode.commonactivity.otpactivity.OTPActivity
 import com.aki.commonlib.intents.Intents
 
 class DeeplinksActivity : AppCompatActivity() {
+
+//    http://boilerplate.com/deeplinks?type=home
+//    http://boilerplate.com/deeplinks?type=otp
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

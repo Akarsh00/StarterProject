@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:customAttribute="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     android:orientation="vertical">
 
@@ -12,5 +13,19 @@
         android:id="@+id/number"
         android:name="com.aki.androidbpcode.IntentFragment"
         android:layout_width="match_parent"
+        android:layout_weight="1"
         android:layout_height="wrap_content" />
+    <com.aki.commonlib.dateandtimepicker.DateTimePicker
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        customAttribute:format="time" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="hello"
+        android:id="@+id/helloWorld"
+        />
 </LinearLayout>

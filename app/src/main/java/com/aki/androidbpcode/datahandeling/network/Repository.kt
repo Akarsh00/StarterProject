@@ -1,6 +1,6 @@
 package com.aki.androidbpcode.datahandeling.network
 
-import com.aki.androidbpcode.datahandeling.dataclass.FarmerInfo
+import com.aki.androidbpcode.datahandeling.data.Country
 import com.esuvidha.grower.network.GenericResponse
 import com.itkacher.okhttpprofiler.OkHttpProfilerInterceptor
 import okhttp3.Interceptor
@@ -17,20 +17,13 @@ object Repository {
         .addConverterFactory(GsonConverterFactory.create())
 
 
-    private var apiDCM = apiFromDCM()
+    private var api = getApi()
 
-    private const val APP_DETAILS_FROM_DCM =
-        "http://dcm-uat-lb-1966467072.ap-south-1.elb.amazonaws.com:8080/DCM-Oracle/api/"
-    private const val APP_DETAILS_FROM_LMS =
-        "http://dcm-uat-lb-1966467072.ap-south-1.elb.amazonaws.com:8080/dcmlms/api/"
+    private const val APP_BASE_URL =
+        "https://restcountries.eu/rest/v2/"
 
 
-    /*     private const val APP_DETAILS_FROM_DCM = "http://65.0.103.68:8080/DCM-Oracle/api/"
-         private const val APP_DETAILS_FROM_LMS = "http://65.0.103.68:8080/dcmlms/api/"*/
-
-
-    private fun apiFromDCM(
-    ): Api {
+    private fun getApi(): Api {
         val builder = OkHttpClient.Builder()
         builder.connectTimeout(30, TimeUnit.SECONDS)
         builder.readTimeout(30, TimeUnit.SECONDS)
@@ -49,30 +42,21 @@ object Repository {
         })
 
         return sBuilder.client(builder.build())
-            .baseUrl(APP_DETAILS_FROM_DCM)
+            .baseUrl(APP_BASE_URL)
             .build().create(Api::class.java)
     }
 
 
     private fun getBaseURL(): String? {
 
-        return APP_DETAILS_FROM_LMS
+        return APP_BASE_URL
     }
 
 
-    suspend fun checkFarmerExistWithThisNumber(mobileNumber: String): ResultWrapper<GenericResponse<Any>?> {
+    suspend fun getAllCountries(
+    ): ResultWrapper</*GenericResponse<*/List<Country>/*>*/?> {
         return CoroutineFactory.executeNetworkRequest {
-            apiDCM.checkFarmerExistWithThisNumber(mobileNumber).execute()
-
-        }
-    }
-
-    suspend fun getFarmerFramerId(
-        farmerId: String,
-        unitCode: String
-    ): ResultWrapper<GenericResponse<FarmerInfo>?> {
-        return CoroutineFactory.executeNetworkRequest {
-            apiDCM.getFarmerFramerId(farmerId, unitCode).execute()
+            api.getAllCountries().execute()
 
         }
     }

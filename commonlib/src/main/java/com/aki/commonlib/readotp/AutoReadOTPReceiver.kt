@@ -1,10 +1,9 @@
-package com.aki.readotp
+package com.aki.commonlib.readotp
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.telephony.SmsManager
 import android.telephony.SmsMessage
 import android.util.Log
 import androidx.localbroadcastmanager.content.LocalBroadcastManager

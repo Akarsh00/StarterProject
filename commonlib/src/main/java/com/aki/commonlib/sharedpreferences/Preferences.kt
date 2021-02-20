@@ -1,10 +1,10 @@
-package com.aki.commonlib
+package com.aki.commonlib.sharedpreferences
 
 import android.content.SharedPreferences
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener
 import android.util.Base64
 
-class Preferences protected constructor(private val preferences: SharedPreferences) {
+class Preferences  constructor( val preferences: SharedPreferences) {
 
     // =============================================================================================
     val all: Map<String, *>
@@ -59,8 +59,7 @@ class Preferences protected constructor(private val preferences: SharedPreferenc
     fun save(key: String?, value: ByteArray?) {
         save(key, Base64.encodeToString(value, Base64.DEFAULT))
     }
-/*
-    fun save(key: String?, json: Any?) {
+/*    fun save(key: String?, json: Any?) {
         save(key, Json.json(json))
     }*/
 

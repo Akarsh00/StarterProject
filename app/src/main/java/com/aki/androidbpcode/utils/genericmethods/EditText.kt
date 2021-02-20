@@ -30,7 +30,7 @@ fun addEditTextPrefix(etMobileNumber: EditText, mobileNoPrefix: String = "+91") 
                 } else {
                     etMobileNumber.text = Html.fromHtml(perfix) as Editable?
                 }
-                Selection.setSelection(etMobileNumber.text, etMobileNumber.text!!.length)
+                Selection.setSelection(etMobileNumber.text, etMobileNumber.text.length)
 
             }
         }

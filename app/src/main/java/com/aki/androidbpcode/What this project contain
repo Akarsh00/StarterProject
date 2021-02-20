@@ -1,13 +1,17 @@
-1.  BaseFragment and BaseActivity
-2.  PERMISSION Utils
-3.  Custom Dialog
-4.  OTP Activvity Added
-5.  Utils   -->     Generic Methods-->
-6. WebViewActivity
-7.  FCM Done
-8.  LANGUAGE SUPPORT
-9.  DEEP LINKS
+This Project Contains following functionality
 
-TODO("CREATE OTP_VIEW")
-TODO("DATE $ TIME PICKER")
-TODO("PICK IMAGE FROM GALLERY AND TAKE IMAGE FROM CAM AND SAVE")
+
+1.   BaseFragment and BaseActivity --> Done
+2.   PERMISSION Utils --> Done
+3.   Custom Dialog   --> Done
+4.   OTP Activity Added--> Done
+6.   WebViewActivity  --> Done
+7.   Shared Prefs --> Done
+8.   Network Call --> Done
+9.   FCM --> Done
+10.  LANGUAGE SUPPORT --> Done
+11.  DEEP LINKS --> Done
+12.  DATE $ TIME PICKER-> Done
+13.  MediaAccess-->  Done
+14.  Utils -->
+15.  Generic Methods-->
